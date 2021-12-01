@@ -1,0 +1,87 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 5px solid #572EE5;
+    
+}
+
+//nav
+.menu{
+    margin-right: 10%;
+    li{ 
+        list-style: none;
+       a{
+           text-decoration: none;
+           color: #572EE5;
+           font-size:large;
+           font-weight: bold;
+       
+       }
+    }
+}
+header img{
+    margin-top: 15px;
+    width: 100px;
+    height: 100px;
+}
+
+
+//crear gif
+.create-gif{
+    width: 100vw;
+    height: 500px;
+    border: #572EE5 solid;
+    display: flex;
+    flex-flow: column wrap;
+}
+main{
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.crear_video{
+    width: 70%;
+    height: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+.App_video{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.App_video video{
+    border: #572EE5 solid 2px;
+    border-radius: 5px;
+}
+
+
+.App_video button{
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+    border: #572EE5;
+    box-shadow: #572EE5 0px 0px 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 25px;
+}

@@ -1,0 +1,5 @@
+co\com\sofka\PetProjectBackend\controllers\GifController.class
+co\com\sofka\PetProjectBackend\services\GifService.class
+co\com\sofka\PetProjectBackend\models\Gif.class
+co\com\sofka\PetProjectBackend\PetProjectBackendApplication.class
+co\com\sofka\PetProjectBackend\repositories\GifRepository.class
