@@ -3,7 +3,7 @@ import axios from 'axios';
 //esta app imprime en pantalla todos los videos almacenados en la base de datos
 //desde el front filtramos y buscamos por tag para que se rendericen en pantalla
 
-function BarraBuscadora= ()=>{
+function BarraBuscadora () {
     const [usuarios,setUsuarios]=useState([]);
     const [videos,setVideos]=useState([]);
     const [busqueda,setBusqueda]=useState("");
@@ -42,6 +42,7 @@ function BarraBuscadora= ()=>{
 
     },[])
     return(
+        <>
         <div className="container_input">
         <input
         className="input_buscar"
@@ -52,14 +53,17 @@ function BarraBuscadora= ()=>{
         <button className="btn-enviar" >Buscar</button>
         </div>
         <div className="videos">
-        {usuarios.map(usuario)=>(
+        {usuarios.map((usuario)=>(
             <div className="box-videos" key={usuario.id}>
                 <h3>{usuario.titulo}</h3>
                 <video src={usuario.src}></video>
                 <p>{usuario.tag}</p>
             </div>
-        )}
+        ))};
         </div>
+        </>
 
     );
 }
+
+export default BarraBuscadora;
