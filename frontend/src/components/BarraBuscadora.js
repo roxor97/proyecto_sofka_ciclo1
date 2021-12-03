@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import axios from 'axios';
+import '../index.css'
 //esta app imprime en pantalla todos los videos almacenados en la base de datos
 //desde el front filtramos y buscamos por tag para que se rendericen en pantalla
 
@@ -10,7 +11,7 @@ function BarraBuscadora () {
 
     
     const peticionGet = async ()=>{
-        await axios.get("")
+        await axios.get("http://localhost:8080/api/gifs")
         .then(response=>{
             setUsuarios(response.data);
             setVideos(response.data);
@@ -38,19 +39,19 @@ function BarraBuscadora () {
     };
 
     useEffect(()=>{
-        peticiones();
+        peticionGet();
 
     },[])
     return(
         <>
         <div className="container_input">
         <input
-        className="input_buscar"
+        className="form-control"
         value={busqueda}
         placeholder="Busqueda por tags"
         onChange={handlechange}
         />
-        <button className="btn-enviar" >Buscar</button>
+        <button className="btn btn-outline-secondary" >Buscar</button>
         </div>
         <div className="videos">
         {usuarios.map((usuario)=>(
@@ -59,7 +60,7 @@ function BarraBuscadora () {
                 <video src={usuario.src}></video>
                 <p>{usuario.tag}</p>
             </div>
-        ))};
+        ))}
         </div>
         </>
 

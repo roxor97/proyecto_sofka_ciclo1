@@ -8,12 +8,13 @@ import BarraBuscadora from './components/BarraBuscadora'
 
 
 
+
 function App() {
   return (
     <div className="App">
     <Header/>
     <main>
-    
+
     <BarraBuscadora/>
       
     </main>
